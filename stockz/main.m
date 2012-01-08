@@ -23,7 +23,10 @@ int main (int argc, const char * argv[])
     
     [stock setObject:[NSNumber numberWithInt:200] forKey:@"shares"];
     
+    
     [stocks addObject:stock];
+    
+    /*-----------------------------------------------------------------------------------*/
     
     stock = [NSMutableDictionary dictionary];
     
@@ -34,6 +37,8 @@ int main (int argc, const char * argv[])
     [stocks addObject:stock];
     
     [stocks writeToFile:@"/tmp/stocks.plist" atomically:YES];
+    
+    /*-----------------------------------------------------------------------------------*/
     
     NSArray *stockList = [NSArray arrayWithContentsOfFile:@"/tmp/stocks.plist"];
     
